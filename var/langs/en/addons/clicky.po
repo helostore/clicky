@@ -24,6 +24,10 @@ msgctxt "SettingsOptions::clicky::license"
 msgid "License key"
 msgstr "License key"
 
+msgctxt "SettingsOptions::clicky::site_id"
+msgid "Site ID (<small>Dashboard > Info > Site Information > Site ID</small>)"
+msgstr "Site ID (<small>Dashboard > Info > Site Information > Site ID</small>)"
+
 msgctxt "Languages::my_sidekick_is_not_present"
 msgid "This add-on has a single requirement: Sidekick add-on. Please install and activate Sidekick first."
 msgstr "This add-on has a single requirement: Sidekick add-on. Please install and activate Sidekick first."

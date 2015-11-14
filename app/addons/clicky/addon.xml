@@ -24,6 +24,9 @@
                     <item id="license">
                         <type>input</type>
                     </item>
+                    <item id="site_id">
+                        <type>input</type>
+                    </item>
                     <item id="info">
                         <type>info</type>
                         <handler>fn_sidekick_info,clicky</handler>
