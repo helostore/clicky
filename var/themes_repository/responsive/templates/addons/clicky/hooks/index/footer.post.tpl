@@ -1,4 +1,4 @@
-{$siteId = $addons.clicky.site_id}
+{$siteId = $addons.clicky.site_id|trim}
 {if !empty($siteId)}
 	<a title="Real Time Web Analytics" href="http://clicky.com/{$siteId}"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
 	<script type="text/javascript">
