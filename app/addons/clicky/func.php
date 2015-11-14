@@ -17,27 +17,8 @@ use Tygh\Storage;
 
 if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
-/**
- * @param $status
- *
- * @return bool
- */
-function fn_clicky_hint($status)
-{
-    $status = strtolower($status);
-    $titleKey = 'auto_image_hint_title_' . $status;
-    $messageKey = 'auto_image_hint_message_' . $status;
-
-    $redirectUrl = urldecode('addons.manage');
-    $message = __($messageKey);
-    $message = str_replace('[link]', fn_url('storage.clear_thumbnails?redirect_url=' . $redirectUrl), $message);
-    fn_set_notification('N', __($titleKey), $message, 'K');
-
-	return true;
-}
 function fn_clicky_uninstall()
 {
-	fn_clicky_hint('D');
 	if (class_exists('\HeloStore\ADLS\LicenseClient', true)) {
 		\HeloStore\ADLS\LicenseClient::process(\HeloStore\ADLS\LicenseClient::CONTEXT_UNINSTALL);
 	}

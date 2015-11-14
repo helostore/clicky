@@ -20,20 +20,19 @@
  *
  * @return bool
  */
-function fn_settings_actions_addons_autoimage_lite(&$newStatus = null, $oldStatus = null, &$onInstall = null)
+function fn_settings_actions_addons_clicky(&$newStatus = null, $oldStatus = null, &$onInstall = null)
 {
 	if (in_array($newStatus, array('A', 'D'))) {
 		if ($newStatus == 'A') {
 			if (class_exists('\HeloStore\ADLS\LicenseClient', true)) {
 				if (\HeloStore\ADLS\LicenseClient::activate()) {
-					return fn_autoimage_lite_hint($newStatus);
+					return true;
 				}
 			} else {
 				fn_set_notification('W', __('warning'), __('my_sidekick_is_not_present'), 'K');
 			}
 			$newStatus = 'D';
 		} else {
-			fn_autoimage_lite_hint($newStatus);
 			if (class_exists('\HeloStore\ADLS\LicenseClient', true)) {
 				\HeloStore\ADLS\LicenseClient::deactivate();
 			}
