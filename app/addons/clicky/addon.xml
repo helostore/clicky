@@ -15,6 +15,10 @@
         <sections>
             <section id="general">
                 <items>
+                    <item id="license_settings">
+                        <type>header</type>
+                        <name>License Settings</name>
+                    </item>
                     <item id="email">
                         <type>input</type>
                     </item>
@@ -24,12 +28,16 @@
                     <item id="license">
                         <type>input</type>
                     </item>
-                    <item id="site_id">
-                        <type>input</type>
-                    </item>
                     <item id="info">
                         <type>info</type>
                         <handler>fn_sidekick_info,clicky</handler>
+                    </item>
+                    <item id="clicky_settings">
+                        <type>header</type>
+                        <name>Clicky Settings</name>
+                    </item>
+                    <item id="site_id">
+                        <type>input</type>
                     </item>
                 </items>
             </section>
